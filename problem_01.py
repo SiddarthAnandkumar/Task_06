@@ -20,31 +20,29 @@ class BankAccount:
         else:
             print(" Withdrawal amount must be positive.")
 
-    # Getter method to view balance
+
     def get_balance(self):
         return self.__balance
 
 
-# Savings Account (inherits from BankAccount)
+
 class SavingsAccount(BankAccount):
     def __init__(self, account_number, balance=0, interest_rate=0.25):
         super().__init__(account_number, balance)
         self.interest_rate = interest_rate
 
-    # Calculate and return interest
     def calculate_interest(self):
         interest = self.get_balance() * self.interest_rate
         print(f" Interest earned: ₹{interest}")
         return interest
 
 
-# Current Account (inherits from BankAccount)
 class CurrentAccount(BankAccount):
     def __init__(self, account_number, balance=0, min_balance=12000):
         super().__init__(account_number, balance)
         self.min_balance = min_balance
 
-    # Override withdraw method
+
     def withdraw(self, amount):
         if amount > 0:
             if self.get_balance() - amount >= self.min_balance:
@@ -67,7 +65,7 @@ savings.withdrawamount(4200)
 savings.calculate_interest()
 print(f"Final Savings Balance: ₹{savings.get_balance()}")
 
-# Operations on Current Account
+
 print("\n---  Current Account Operations ---")
 current.depositmoney(4500)
 current.withdrawamount(25000)

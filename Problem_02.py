@@ -35,7 +35,7 @@ class ContractEmployee(Employee):
         return total_salary
 
 
-# Subclass: Manager
+
 class Manager(Employee):
     def __init__(self, name, base_salary, bonus, allowance):
         super().__init__(name, base_salary)
