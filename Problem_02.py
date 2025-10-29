@@ -48,12 +48,12 @@ class Manager(Employee):
 
 
 if __name__ == "__main__":
-    # Creating different employee objects
+
     emp1 = RegularEmployee("Siddarth", 40000, 5000, 2000)
     emp2 = ContractEmployee("Mohan", 800, 100)
     emp3 = Manager("Madhu", 60000, 10000, 5000)
 
-    # Displaying their salary details
+
     print("----- Regular Employee -----")
     emp1.display_details()
 
