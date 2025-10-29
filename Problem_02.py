@@ -25,7 +25,7 @@ class RegularEmployee(Employee):
 
 class ContractEmployee(Employee):
     def __init__(self, name, hourly_rate, hours_worked):
-        # Base salary is not needed for contract employees
+
         super().__init__(name, base_salary=0)
         self.hourly_rate = hourly_rate
         self.hours_worked = hours_worked
